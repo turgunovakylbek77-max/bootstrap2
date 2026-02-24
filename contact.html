@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-EduBot Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brend" href="index.html">EduBot Learning</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About-Жөнүндө</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses-Курстар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register-Каттоо</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact-Байланыш</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Contact Us-Биз менен байланышыңыз</h2>
+            <div class="row justtify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name-Аты</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message-Кабар</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message-Кабар жөнөтүү
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Message -->
+        <div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 11">
+            <div id="contactToast" class="toast align-items-center tex-bg-success border-0" role="alert"
+                aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">Message sent successfully!-Билдирүү ийгиликтүү жөнөтүлдү!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <p class="mb-0">&copy; 2026 EduBot Learning. All rights reserved.-2026 EduBot үйрөнүү. Бардык укуктар корголгон.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit',function (e) {
+            e.preventDefault();
+            const toast = new bootstrap.Toast(document.getElementById('contactToast'));
+            toast.show();
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

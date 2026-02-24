@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses-EduBot Learning-Курстар-EduBot үйрөнүү</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brend" href="index.html">EduBot Learning-EduBot үйрөнүү</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About-Жөнүндө</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses-Курстар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register-Каттоо</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact-Байланыш</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <header class="bg-light py-5 text-center">
+            <div class="container">
+                <h1>Our Courses-Биздин курстар</h1>
+                <p>Browse our most popular programs-Биздин эң популярдуу программаларыбызды карап чыгыңыз</p>
+            </div>
+        </header>
+
+        <!-- Courses Grid -->
+        <section class="container m-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./images/html css js.jpg" class="card-img-top" alt="Frontend Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Frontend Development</h5>
+                            <p class="card-text">HTML, CSS, JavaScript, Bootstrap, and React</p>
+                            <span class="badge bg-success">Beginner</span>
+                            <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
+                                data-bs-target="#courselModal">View Details-Чоо-жайын көрүү</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./images/python &django.jpg" class="card-img-top" alt="Backend Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Backend with Python & Djiango</h5>
+                            <p class="card-text">Learn how to build powerful APIs and apps-Күчтүү API'лерди жана колдонмолорду кантип курууну үйрөнүңүз</p>
+                            <span class="badge bg-success">Intermediate-Орто</span>
+                            <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
+                                data-bs-target="#courselModal">View Details-Чоо-жайын көрүү</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./images/ai.jpg" class="card-img-top" alt="Backend Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to AI & Machine Learning</h5>
+                            <p class="card-text">Get started with AI tools and Python basics-AI куралдары жана Python негиздери менен баштаңыз</p>
+                            <span class="badge bg-success">Beginner</span>
+                            <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
+                                data-bs-target="#courselModal">View Details-Чоо-жайын көрүү</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div class="modal fade" id="courselModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Frontend Development</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Learn how to builid stunning websites using modern technologies like HTML, CSS, JavaScript, and
+                        React.-HTML, CSS, JavaScript жана сыяктуу заманбап технологияларды колдонуу менен укмуштуудай веб-сайттарды кантип курууну үйрөнүңүз
+                    </div>
+                    <div class="modal-footer">
+                        <a href="register.html" class="btn btn-primary">Register Now-Азыр катталыңыз</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="course2Modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Backend with & Django</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        This course covers Python fundamentals, REST APIs, authentication, and PostgrSQL using Django.-Бул курс Python негиздерин, REST API'лерин, аутентификацияны жана Django аркылуу PostgrSQLди камтыйт.
+                    </div>
+                    <div class="modal-footer">
+                        <a href="register.html" class="btn btn-primary">Register Now-Азыр катталыңыз</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="course3Modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Intro to AI & Machine Learning</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Discover the world of artificial intelligence and machine learning. No prior experience needed.
+                    </div>
+                    <div class="modal-footer">
+                        <a href="register.html" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <p class="mb-0">&copy; 2026 EduBot Learning. All rights reserved.-2026 EduBot үйрөнүү. Бардык укуктар корголгон.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
